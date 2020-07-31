@@ -1,9 +1,9 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
-import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
+import { ImageProps } from './types';
 
-const AboutImg = ({ filename, alt }) => (
+const ProjectImg = ({ filename, alt }: ImageProps) => (
   <StaticQuery
     query={graphql`
       query {
@@ -13,8 +13,8 @@ const AboutImg = ({ filename, alt }) => (
               relativePath
               name
               childImageSharp {
-                fixed(width: 350) {
-                  ...GatsbyImageSharpFixed
+                fluid(maxWidth: 1366) {
+                  ...GatsbyImageSharpFluid
                 }
               }
             }
@@ -27,15 +27,10 @@ const AboutImg = ({ filename, alt }) => (
 
       if (!image) return null;
 
-      const imageFixed = image.node.childImageSharp.fixed;
-      return <Img className="rounded shadow-lg" alt={alt} fixed={imageFixed} />;
+      const imageFluid = image.node.childImageSharp.fluid;
+      return <Img alt={alt} fluid={imageFluid} />;
     }}
   />
 );
 
-AboutImg.propTypes = {
-  filename: PropTypes.string,
-  alt: PropTypes.string,
-};
-
-export default AboutImg;
+export default ProjectImg;

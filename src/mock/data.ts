@@ -2,15 +2,15 @@ import { nanoid } from 'nanoid';
 
 // HEAD DATA
 export const headData = {
-  title: '', // e.g: 'Name | Developer'
-  lang: '', // e.g: en, es, fr, jp
+  title: 'Angeliki Skandali | Data Analyst', // e.g: 'Name | Developer'
+  lang: 'en', // e.g: en, es, fr, jp
   description: '', // e.g: Welcome to my website
 };
 
 // HERO DATA
 export const heroData = {
   title: '',
-  name: '',
+  name: 'Angeliki Skandali',
   subtitle: '',
   cta: '',
 };
@@ -72,11 +72,6 @@ export const footerData = {
     },
     {
       id: nanoid(),
-      name: 'codepen',
-      url: '',
-    },
-    {
-      id: nanoid(),
       name: 'linkedin',
       url: '',
     },
@@ -90,5 +85,5 @@ export const footerData = {
 
 // Github start/fork buttons
 export const githubButtons = {
-  isEnabled: true, // set to false to disable the GitHub stars/fork buttons
+  isEnabled: false, // set to false to disable the GitHub stars/fork buttons
 };

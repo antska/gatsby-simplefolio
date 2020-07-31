@@ -5,6 +5,7 @@ import PortfolioContext from '../../context/context';
 import GithubButtons from '../GithubButtons/GithubButtons';
 
 import { githubButtons } from '../../mock/data';
+import { Network } from '../../../@types';
 
 const Footer = () => {
   const { footer } = useContext(PortfolioContext);
@@ -21,7 +22,7 @@ const Footer = () => {
         </span>
         <div className="social-links">
           {networks &&
-            networks.map((network) => {
+            networks.map((network: Network) => {
               const { id, name, url } = network;
               return (
                 <a

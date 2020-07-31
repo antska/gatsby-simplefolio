@@ -9,7 +9,7 @@ import { PortfolioProvider } from '../context/context';
 
 import { heroData, aboutData, projectsData, contactData, footerData } from '../mock/data';
 
-function App() {
+const App: React.FC = () => {
   const [hero, setHero] = useState({});
   const [about, setAbout] = useState({});
   const [projects, setProjects] = useState([]);
@@ -33,6 +33,6 @@ function App() {
       <Footer />
     </PortfolioProvider>
   );
-}
+};
 
 export default App;

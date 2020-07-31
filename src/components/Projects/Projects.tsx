@@ -3,8 +3,9 @@ import Fade from 'react-reveal/Fade';
 import Tilt from 'react-tilt';
 import { Container, Row, Col } from 'react-bootstrap';
 import PortfolioContext from '../../context/context';
-import Title from '../Title/Title';
+import Title from '../Title';
 import ProjectImg from '../Image/ProjectImg';
+import { Project } from '../../../@types';
 
 const Projects = () => {
   const { projects } = useContext(PortfolioContext);
@@ -27,7 +28,7 @@ const Projects = () => {
       <Container>
         <div className="project-wrapper">
           <Title title="Projects" />
-          {projects.map((project) => {
+          {projects.map((project: Project) => {
             const { title, info, info2, url, repo, img, id } = project;
 
             return (

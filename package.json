@@ -40,6 +40,7 @@
     "react-tilt": "^0.1.4"
   },
   "devDependencies": {
+    "@types/react-helmet": "^6.0.0",
     "@typescript-eslint/eslint-plugin": "^3.7.1",
     "@typescript-eslint/parser": "^3.7.1",
     "babel-eslint": "^10.1.0",
