@@ -1,7 +1,8 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "gatsby-simplefolio",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "A simplified bare-bones starter for Gatsby with Typescript & tailwind",
+  "author": "Antonis Skandalis <ant.skandalis@gmail.com>",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
@@ -11,7 +12,8 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "bootstrap": "^4.5.0",
@@ -22,6 +24,7 @@
     "gatsby-plugin-react-helmet": "^3.3.4",
     "gatsby-plugin-sass": "^2.3.4",
     "gatsby-plugin-sharp": "^2.6.12",
+    "gatsby-plugin-typescript": "^2.4.16",
     "gatsby-source-filesystem": "^2.3.12",
     "gatsby-transformer-sharp": "^2.5.5",
     "nanoid": "^3.1.10",
@@ -37,8 +40,10 @@
     "react-tilt": "^0.1.4"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^3.7.1",
+    "@typescript-eslint/parser": "^3.7.1",
     "babel-eslint": "^10.1.0",
-    "eslint": "7.2.0",
+    "eslint": "^7.5.0",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.21.2",
@@ -48,7 +53,8 @@
     "eslint-plugin-react-hooks": "^4.0.4",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.11",
-    "prettier": "^2.0.5"
+    "prettier": "^2.0.5",
+    "typescript": "^3.9.7"
   },
   "repository": {
     "type": "git",
