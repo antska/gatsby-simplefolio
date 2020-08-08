@@ -9,7 +9,7 @@ module.exports = {
     'airbnb',
     'prettier',
   ],
-  plugins: ['@typescript-eslint', 'react'],
+  plugins: ['@typescript-eslint', 'emotion', 'react'],
   env: {
     node: true,
     browser: true,
