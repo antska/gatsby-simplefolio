@@ -1,3 +1,5 @@
 import { css } from '@emotion/core';
 
-export const globalStyles = css``;
+const globalStyles = css``;
+
+export default globalStyles;

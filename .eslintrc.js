@@ -40,6 +40,7 @@ module.exports = {
     'react/jsx-props-no-spreading': 'off', // disable if necessary
     'react/require-default-props': 'off',
     'react/prop-types': 'off',
+    '@typescript-eslint/ban-ts-comment': 'off',
   },
   overrides: [
     // Override some TypeScript rules just for .js files
