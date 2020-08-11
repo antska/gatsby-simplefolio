@@ -4,25 +4,28 @@ import { Twitter, LinkedinIn, Github } from '@emotion-icons/fa-brands';
 
 // HEAD DATA
 export const headData = {
-  title: '', // e.g: 'Name | Developer'
-  lang: 'en', // e.g: en, es, fr, jp
-  description: '', // e.g: Welcome to my website
+  title: 'Angeliki Skandali | Data Analyst - Scientist', // e.g: 'Name | Developer'
+  lang: 'en',
+  description: 'Data Analyst - Scientist with solid knowledge of R, Python & SQL',
 };
 
 // HERO DATA
 export const heroData = {
   title: '',
-  name: '',
-  subtitle: '',
+  name: 'Angeliki Skandali',
+  subtitle: 'I am a curious Data Analyst',
   cta: '',
 };
 
 // ABOUT DATA
 export const aboutData = {
   img: 'profile.jpg',
-  paragraphOne: '',
-  paragraphTwo: '',
-  paragraphThree: '',
+  paragraphOne:
+    'Data Analyst with in depth knowledge of statistical modeling, data analysis and statistical learning.',
+  paragraphTwo:
+    'Conducted data analysis in a big variety of projects that included prediction, modeling different kind of data, machine learning techniques, visualization of results etc.',
+  paragraphThree:
+    'Successfully developed and implemented clinical trial design that detects gene signatures, classifies sensitive patients and tests treatment efficacy.',
   resume: 'https://www.resumemaker.online/es.php', // if no resume, the button will not show up
 };
 
@@ -30,30 +33,38 @@ export const aboutData = {
 export const projectsData = [
   {
     id: nanoid(),
-    img: 'project.jpg',
-    title: '',
-    info: '',
+    img: 'pharmacologic_substances_coronavirus.png',
+    title: 'PHARMACOLOGIC SUBSTANCES & CORONAVIRUS',
+    info:
+      'Data analysis on relationships between pharmacologic substances or targets & disease. ' +
+      'Among others, drug identification, finding the top 10 key opinion leaders per drug and ' +
+      'clustering based on protein target have been achieved',
     info2: '',
-    url: '',
-    repo: 'https://github.com/antska/gatsby-simplefolio-ts-emotion', // if no repo, the button will not show up
+    url: '/static/e92e987b731bb48e378c17ff4a828bee/pharmacologic_substances_coronavirus.pdf',
   },
   {
     id: nanoid(),
-    img: 'project.jpg',
-    title: '',
-    info: '',
+    img: 'clinical_trials_graph.png',
+    title:
+      'Biomarker adaptive designs in clinical trials with subgroup analysis and survival outcome.',
+    info:
+      'In this study we are interested in creating an adaptive design for detecting gene signatures ' +
+      'and prospectively identify a target subpopulation ' +
+      'when having time-to-event endpoints as a primary outcome.',
     info2: '',
-    url: '',
-    repo: 'https://github.com/antska/gatsby-simplefolio-ts-emotion', // if no repo, the button will not show up
+    url: '/static/50fdc66cdf3bab1603b91ec9e4068101/clinical_trials_angeliki_skandali.pdf',
   },
   {
     id: nanoid(),
-    img: 'project.jpg',
-    title: '',
-    info: '',
+    img: 'ck.png',
+    title: 'Clustering users of a telecommunication company',
+    info:
+      'This analysis focuses on clustering users from a telecommunication company based on their ' +
+      'mobile phone usage. Based on this clustering, it is possible to extract valuable information' +
+      " about the users' behaviour and preferences per group.",
     info2: '',
-    url: '',
-    repo: 'https://github.com/antska/gatsby-simplefolio-ts-emotion', // if no repo, the button will not show up
+    url: 'https://github.com/askandali/clustering-telecom-users',
+    repo: 'https://github.com/askandali/clustering-telecom-users', // if no repo, the button will not show up
   },
 ];
 
@@ -61,7 +72,7 @@ export const projectsData = [
 export const contactData = {
   cta: '',
   btn: '',
-  email: '',
+  email: 'angeliki.skandali@gmail.com',
 };
 
 // FOOTER DATA
@@ -70,19 +81,19 @@ export const footerData = {
     {
       id: nanoid(),
       name: 'twitter',
-      url: '',
+      url: 'https://twitter.com/AngelikiSkanda1',
       Icon: <Twitter size={28} />,
     },
     {
       id: nanoid(),
       name: 'linkedin',
-      url: '',
+      url: 'https://www.linkedin.com/in/angeliki-skandali',
       Icon: <LinkedinIn size={28} />,
     },
     {
       id: nanoid(),
       name: 'github',
-      url: '',
+      url: 'https://github.com/askandali',
       Icon: <Github size={28} />,
     },
   ],

@@ -9,6 +9,7 @@ import AboutImg from 'components/Image/AboutImg';
 import PortfolioContext from 'context/context';
 import theme from 'styles/theme';
 import { buttonStyle, resumeButtonStyle } from 'styles/shared';
+import { graphql, useStaticQuery } from 'gatsby';
 
 const AboutSection = styled.section`
   background-color: ${theme.colors.primary};
@@ -76,6 +77,13 @@ const AboutWrapperInfoText = styled.p`
 `;
 
 const About = () => {
+  const data = useStaticQuery(graphql`
+    query cvFile {
+      file(base: { eq: "Angeliki_Skandali_CV.pdf" }) {
+        publicURL
+      }
+    }
+  `);
   const { about } = useContext(PortfolioContext);
   const { img, paragraphOne, paragraphTwo, paragraphThree, resume } = about;
 
@@ -124,9 +132,9 @@ const About = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       css={[buttonStyle, resumeButtonStyle]}
-                      href={resume}
+                      href={data.file.publicURL}
                     >
-                      Resume
+                      CV
                     </a>
                   </span>
                 )}

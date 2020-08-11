@@ -6,7 +6,6 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-offline`,
     `gatsby-plugin-typescript`,
     {
       resolve: 'gatsby-plugin-root-import',
@@ -35,6 +34,14 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `files`,
+        path: `${__dirname}/src/files/`,
+      },
+    },
+    `gatsby-plugin-advanced-sitemap`,
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Gatsby Simplefolio`,
@@ -46,5 +53,6 @@ module.exports = {
         icon: 'src/images/favicon.png',
       },
     },
+    `gatsby-plugin-offline`,
   ],
 };

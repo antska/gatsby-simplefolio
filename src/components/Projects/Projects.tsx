@@ -11,7 +11,6 @@ import Title from 'components/Title';
 import ProjectImg from 'components/Image/ProjectImg';
 import theme from 'styles/theme';
 import { buttonStyle, heroButtonStyle } from 'styles/shared';
-import { textColorMain } from 'styles/typography';
 import { Project } from '../../../@types';
 
 const ProjectsSection = styled.section`
@@ -116,7 +115,7 @@ const Projects = () => {
 
             return (
               <Row key={id}>
-                <Col lg={4} sm={12}>
+                <Col lg={6} sm={12}>
                   <Fade
                     left={isDesktop}
                     bottom={isMobile}
@@ -133,20 +132,11 @@ const Projects = () => {
                         </p>
                         <p className="mb-4">{info2 || ''}</p>
                       </div>
-                      <a
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        css={[buttonStyle, heroButtonStyle]}
-                        href={url || '#!'}
-                      >
-                        See Live
-                      </a>
-
                       {repo && (
                         <a
                           target="_blank"
                           rel="noopener noreferrer"
-                          css={[buttonStyle, textColorMain]}
+                          css={[buttonStyle, heroButtonStyle]}
                           href={repo}
                         >
                           Source Code
@@ -155,7 +145,7 @@ const Projects = () => {
                     </ProjectWrapperText>
                   </Fade>
                 </Col>
-                <Col lg={8} sm={12}>
+                <Col lg={{ span: 4, offset: 2 }} sm={12}>
                   <Fade
                     right={isDesktop}
                     bottom={isMobile}
