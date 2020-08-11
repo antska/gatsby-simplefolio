@@ -1,6 +1,9 @@
 const path = require('path');
 
 module.exports = {
+  siteMetadata: {
+    siteUrl: `https://skange.netlify.app`,
+  },
   plugins: [
     `gatsby-plugin-emotion`,
     `gatsby-plugin-react-helmet`,
