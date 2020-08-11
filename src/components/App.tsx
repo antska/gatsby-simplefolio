@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { Global } from '@emotion/core';
 
-import Hero from './Hero';
-import About from './About';
-import Projects from './Projects';
-import Contact from './Contact';
-import Footer from './Footer';
-import { PortfolioProvider } from '../context/context';
-import { heroData, aboutData, projectsData, contactData, footerData } from '../mock/data';
-import globalStyles from '../styles/global';
-import { typeStyles } from '../styles/typography';
+import Hero from 'components/Hero';
+import About from 'components/About';
+import Projects from 'components/Projects';
+import Contact from 'components/Contact';
+import Footer from 'components/Footer';
+import { PortfolioProvider } from 'context/context';
+import { heroData, aboutData, projectsData, contactData, footerData } from 'mock/data';
+import globalStyles from 'styles/global';
+import { typeStyles } from 'styles/typography';
 
 const App: React.FC = () => {
   const [hero, setHero] = useState({});

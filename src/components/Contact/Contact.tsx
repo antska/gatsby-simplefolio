@@ -4,10 +4,10 @@ import Fade from 'react-reveal/Fade';
 import { Container } from 'react-bootstrap';
 import styled from '@emotion/styled';
 
-import PortfolioContext from '../../context/context';
-import Title from '../Title';
-import theme from '../../styles/theme';
-import { buttonStyle, resumeButtonStyle } from '../../styles/shared';
+import PortfolioContext from 'context/context';
+import Title from 'components/Title';
+import theme from 'styles/theme';
+import { buttonStyle, resumeButtonStyle } from 'styles/shared';
 
 const ContactSection = styled.section`
   background-image: linear-gradient(

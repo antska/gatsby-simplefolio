@@ -6,13 +6,13 @@ import Tilt from 'react-tilt';
 import { Container, Row, Col } from 'react-bootstrap';
 import styled from '@emotion/styled';
 
-import PortfolioContext from '../../context/context';
-import Title from '../Title';
-import ProjectImg from '../Image/ProjectImg';
+import PortfolioContext from 'context/context';
+import Title from 'components/Title';
+import ProjectImg from 'components/Image/ProjectImg';
+import theme from 'styles/theme';
+import { buttonStyle, heroButtonStyle } from 'styles/shared';
+import { textColorMain } from 'styles/typography';
 import { Project } from '../../../@types';
-import theme from '../../styles/theme';
-import { buttonStyle, heroButtonStyle } from '../../styles/shared';
-import { textColorMain } from '../../styles/typography';
 
 const ProjectsSection = styled.section`
   background-color: ${theme.colors.white};

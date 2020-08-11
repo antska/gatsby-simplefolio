@@ -4,11 +4,11 @@ import { Link } from 'react-scroll';
 import styled from '@emotion/styled';
 import { AngleUp } from '@emotion-icons/fa-solid';
 
-import PortfolioContext from '../../context/context';
-import GithubButtons from '../GithubButtons';
-import { githubButtons } from '../../mock/data';
+import theme from 'styles/theme';
+import PortfolioContext from 'context/context';
+import { githubButtons } from 'mock/data';
+import GithubButtons from 'components/GithubButtons';
 import { Network } from '../../../@types';
-import theme from '../../styles/theme';
 
 const FooterSection = styled.footer`
   background-color: ${theme.colors.darkGrey};

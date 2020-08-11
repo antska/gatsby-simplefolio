@@ -2,7 +2,8 @@ import React from 'react';
 // @ts-ignore
 import Fade from 'react-reveal/Fade';
 import styled from '@emotion/styled';
-import theme from '../../styles/theme';
+
+import theme from 'styles/theme';
 
 type Props = {
   title: string;

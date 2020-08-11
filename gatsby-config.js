@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   plugins: [
     `gatsby-plugin-emotion`,
@@ -6,6 +8,18 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-typescript`,
+    {
+      resolve: 'gatsby-plugin-root-import',
+      options: {
+        components: path.join(__dirname, 'src/components'),
+        context: path.join(__dirname, 'src/context'),
+        mock: path.join(__dirname, 'src/mock'),
+        styles: path.join(__dirname, 'src/styles'),
+        types: path.join(__dirname, '@types'),
+        src: path.join(__dirname, 'src'),
+        pages: path.join(__dirname, 'src/pages'),
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

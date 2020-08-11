@@ -1,5 +1,3 @@
-import React from 'react';
-
 export type Project = {
   id: number;
   title: string;
@@ -14,5 +12,5 @@ export type Network = {
   id: number;
   name: string;
   url: string;
-  Icon: React.ReactNode;
+  Icon: JSX.Element;
 };

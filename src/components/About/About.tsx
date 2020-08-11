@@ -4,11 +4,11 @@ import Fade from 'react-reveal/Fade';
 import { Col, Container, Row } from 'react-bootstrap';
 import styled from '@emotion/styled';
 
-import Title from '../Title';
-import AboutImg from '../Image/AboutImg';
-import PortfolioContext from '../../context/context';
-import theme from '../../styles/theme';
-import { buttonStyle, resumeButtonStyle } from '../../styles/shared';
+import Title from 'components/Title';
+import AboutImg from 'components/Image/AboutImg';
+import PortfolioContext from 'context/context';
+import theme from 'styles/theme';
+import { buttonStyle, resumeButtonStyle } from 'styles/shared';
 
 const AboutSection = styled.section`
   background-color: ${theme.colors.primary};

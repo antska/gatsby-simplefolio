@@ -3,15 +3,16 @@ import { Container } from 'react-bootstrap';
 // @ts-ignore
 import Fade from 'react-reveal/Fade';
 import { Link } from 'react-scroll';
-import PortfolioContext from '../../context/context';
+
+import PortfolioContext from 'context/context';
 import {
   buttonStyle,
   heroButtonStyle,
   heroCtaStyle,
   HeroSection,
   heroTitleStyle,
-} from '../../styles/shared';
-import { textColorMain } from '../../styles/typography';
+} from 'styles/shared';
+import { textColorMain } from 'styles/typography';
 
 const Hero = () => {
   const { hero } = useContext(PortfolioContext);
