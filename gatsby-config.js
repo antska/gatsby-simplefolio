@@ -11,11 +11,18 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-typescript`,
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-87594841-7',
+      },
+    },
+    {
       resolve: 'gatsby-plugin-root-import',
       options: {
         components: path.join(__dirname, 'src/components'),
         context: path.join(__dirname, 'src/context'),
         mock: path.join(__dirname, 'src/mock'),
+        images: path.join(__dirname, 'src/images'),
         styles: path.join(__dirname, 'src/styles'),
         types: path.join(__dirname, '@types'),
         src: path.join(__dirname, 'src'),
@@ -45,12 +52,20 @@ module.exports = {
     },
     `gatsby-plugin-advanced-sitemap`,
     {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://skange.netlify.app',
+        sitemap: 'https://skange.netlify.app/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }],
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Gatsby Simplefolio`,
         short_name: `Simplefolio`,
         start_url: `/`,
-        background_color: `#fff`,
+        background_color: `#ffffff`,
         theme_color: `#02aab0`,
         display: `standalone`,
         icon: 'src/images/favicon.png',
