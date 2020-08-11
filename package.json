@@ -16,6 +16,8 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
+    "@emotion-icons/fa-brands": "^2.6.1",
+    "@emotion-icons/fa-solid": "^2.6.1",
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
     "bootstrap": "^4.5.0",

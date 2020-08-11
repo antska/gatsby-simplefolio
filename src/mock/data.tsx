@@ -1,4 +1,6 @@
+import React from 'react';
 import { nanoid } from 'nanoid';
+import { Twitter, LinkedinIn, Github } from '@emotion-icons/fa-brands';
 
 // HEAD DATA
 export const headData = {
@@ -69,16 +71,19 @@ export const footerData = {
       id: nanoid(),
       name: 'twitter',
       url: '',
+      Icon: <Twitter size={28} />,
     },
     {
       id: nanoid(),
       name: 'linkedin',
       url: '',
+      Icon: <LinkedinIn size={28} />,
     },
     {
       id: nanoid(),
       name: 'github',
       url: '',
+      Icon: <Github size={28} />,
     },
   ],
 };

@@ -1,11 +1,94 @@
 import React, { useContext, useEffect, useState } from 'react';
+// @ts-ignore
 import Fade from 'react-reveal/Fade';
+// @ts-ignore
 import Tilt from 'react-tilt';
 import { Container, Row, Col } from 'react-bootstrap';
+import styled from '@emotion/styled';
+
 import PortfolioContext from '../../context/context';
 import Title from '../Title';
 import ProjectImg from '../Image/ProjectImg';
 import { Project } from '../../../@types';
+import theme from '../../styles/theme';
+import { buttonStyle, heroButtonStyle } from '../../styles/shared';
+import { textColorMain } from '../../styles/typography';
+
+const ProjectsSection = styled.section`
+  background-color: ${theme.colors.white};
+  color: ${theme.colors.darkBlue};
+  margin-top: -15rem;
+  padding-top: 15rem;
+
+  @media (max-width: ${theme.breakpoints.tabLand}) {
+    margin-top: 0;
+    padding-top: 5rem;
+  }
+`;
+
+const ProjectWrapper = styled.div`
+  margin-bottom: 15rem;
+
+  @media (max-width: ${theme.breakpoints.phone}) {
+    margin-bottom: 0rem;
+  }
+
+  .row {
+    margin-bottom: 8rem;
+
+    @media (max-width: ${theme.breakpoints.phone}) {
+      margin-bottom: 4rem;
+    }
+  }
+`;
+
+const ProjectWrapperText = styled.div`
+  text-align: left;
+
+  @media (max-width: ${theme.breakpoints.phone}) {
+    margin-bottom: 2.5rem !important;
+  }
+  @media (max-width: ${theme.breakpoints.tabLand}) {
+    margin-bottom: 4.8rem;
+  }
+
+  & p > a {
+    color: ${theme.colors.secondary};
+  }
+`;
+
+const ProjectWrapperTextTitle = styled.h3`
+  font-weight: bold;
+  margin-bottom: 1.8rem;
+  font-size: ${theme.fontSize.mid};
+
+  @media (max-width: ${theme.breakpoints.phone}) {
+    font-size: 2rem;
+  }
+`;
+
+const ProjectWrapperImage = styled.div`
+  width: 90%;
+  margin: 0 auto;
+
+  @media (max-width: ${theme.breakpoints.tabLand}) {
+    width: 100%;
+    margin: 0;
+  }
+
+  & .thumbnail {
+    border: none;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.05);
+    transition: 0.5s transform cubic-bezier(0.155, 1.105, 0.295, 1.12), 0.5s box-shadow,
+      0.5s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+
+    @media (max-width: ${theme.breakpoints.phone}) {
+      border: 1px solid #d2d2d2;
+      box-shadow: none;
+      margin-bottom: 3.2rem;
+    }
+  }
+`;
 
 const Projects = () => {
   const { projects } = useContext(PortfolioContext);
@@ -24,9 +107,9 @@ const Projects = () => {
   }, []);
 
   return (
-    <section id="projects">
+    <ProjectsSection>
       <Container>
-        <div className="project-wrapper">
+        <ProjectWrapper>
           <Title title="Projects" />
           {projects.map((project: Project) => {
             const { title, info, info2, url, repo, img, id } = project;
@@ -41,8 +124,8 @@ const Projects = () => {
                     delay={500}
                     distance="30px"
                   >
-                    <div className="project-wrapper__text">
-                      <h3 className="project-wrapper__text-title">{title || 'Project Title'}</h3>
+                    <ProjectWrapperText>
+                      <ProjectWrapperTextTitle>{title || 'Project Title'}</ProjectWrapperTextTitle>
                       <div>
                         <p>
                           {info ||
@@ -53,7 +136,7 @@ const Projects = () => {
                       <a
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="cta-btn cta-btn--hero"
+                        css={[buttonStyle, heroButtonStyle]}
                         href={url || '#!'}
                       >
                         See Live
@@ -63,13 +146,13 @@ const Projects = () => {
                         <a
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="cta-btn text-color-main"
+                          css={[buttonStyle, textColorMain]}
                           href={repo}
                         >
                           Source Code
                         </a>
                       )}
-                    </div>
+                    </ProjectWrapperText>
                   </Fade>
                 </Col>
                 <Col lg={8} sm={12}>
@@ -80,7 +163,7 @@ const Projects = () => {
                     delay={1000}
                     distance="30px"
                   >
-                    <div className="project-wrapper__image">
+                    <ProjectWrapperImage>
                       <a
                         href={url || '#!'}
                         target="_blank"
@@ -105,15 +188,15 @@ const Projects = () => {
                           </div>
                         </Tilt>
                       </a>
-                    </div>
+                    </ProjectWrapperImage>
                   </Fade>
                 </Col>
               </Row>
             );
           })}
-        </div>
+        </ProjectWrapper>
       </Container>
-    </section>
+    </ProjectsSection>
   );
 };
 

@@ -4,7 +4,7 @@ import Fade from 'react-reveal/Fade';
 import { Col, Container, Row } from 'react-bootstrap';
 import styled from '@emotion/styled';
 
-import Title from '../Title/Title';
+import Title from '../Title';
 import AboutImg from '../Image/AboutImg';
 import PortfolioContext from '../../context/context';
 import theme from '../../styles/theme';

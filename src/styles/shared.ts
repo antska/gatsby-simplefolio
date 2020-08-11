@@ -28,7 +28,7 @@ export const resumeButtonStyle = css`
   color: ${theme.colors.white};
   border: 2px solid ${theme.colors.white};
 
-  &::after {
+  &:after {
     background: ${theme.colors.white};
   }
 
@@ -36,7 +36,7 @@ export const resumeButtonStyle = css`
     color: ${theme.colors.secondary};
     text-decoration: none;
 
-    &::after {
+    &:after {
       width: 100%;
     }
   }
