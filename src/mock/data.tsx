@@ -4,9 +4,11 @@ import { Twitter, LinkedinIn, Github } from '@emotion-icons/fa-brands';
 
 // HEAD DATA
 export const headData = {
-  title: 'Angeliki Skandali | Data Analyst - Scientist', // e.g: 'Name | Developer'
+  title: 'Angeliki Skandali', // e.g: 'Name | Developer'
+  extraTitle: 'Data Analyst - Scientist',
   lang: 'en',
-  description: 'Data Analyst - Scientist with solid knowledge of R, Python & SQL',
+  description:
+    'Data Analyst - Scientist with in depth knowledge of statistical modeling, data analysis and statistical learning.',
 };
 
 // HERO DATA

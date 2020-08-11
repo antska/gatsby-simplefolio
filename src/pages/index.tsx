@@ -6,11 +6,11 @@ import { headData } from 'mock/data';
 import SEO from 'components/SEO';
 
 export default () => {
-  const { title, description } = headData;
+  const { extraTitle, description } = headData;
 
   return (
     <>
-      <SEO title={title} description={description} type="Organization" />
+      <SEO title={extraTitle} description={description} type="Organization" />
       <App />
     </>
   );
