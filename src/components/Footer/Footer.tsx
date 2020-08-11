@@ -29,7 +29,7 @@ const FooterSection = styled.footer`
 `;
 
 const BackToTop = styled.span`
-  & i {
+  & svg {
     color: ${theme.colors.white};
     margin: 1rem 0 ${theme.fontSize.default};
     transition: all 0.2s ease-in;
@@ -103,7 +103,7 @@ const Footer = () => {
               return (
                 <a
                   key={id}
-                  href={url || 'https://github.com/cobidev/gatsby-simplefolio'}
+                  href={url || 'https://github.com/antska/gatsby-simplefolio-ts-emotion'}
                   rel="noopener noreferrer"
                   target="_blank"
                   aria-label={name}

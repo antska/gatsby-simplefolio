@@ -93,7 +93,7 @@ const About = () => {
   }, []);
 
   return (
-    <AboutSection>
+    <AboutSection id="about">
       <Container>
         <Title title="About Me" />
         <AboutWrapper>

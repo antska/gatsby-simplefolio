@@ -74,7 +74,11 @@ const Contact = () => {
               target="_blank"
               rel="noopener noreferrer"
               css={[buttonStyle, resumeButtonStyle]}
-              href={email ? `mailto:${email}` : 'https://github.com/cobidev/react-simplefolio'}
+              href={
+                email
+                  ? `mailto:${email}`
+                  : 'https://github.com/antska/gatsby-simplefolio-ts-emotion'
+              }
             >
               {btn || "Let's Talk"}
             </a>
