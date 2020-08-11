@@ -1,6 +1,6 @@
-# Gatsby Simplefolio ⚡️ [![GitHub](https://img.shields.io/github/license/cobidev/gatsby-simplefolio?color=blue)](https://github.com/cobidev/gatsby-simplefolio/blob/master/LICENSE.md) ![GitHub stars](https://img.shields.io/github/stars/cobidev/gatsby-simplefolio) ![GitHub forks](https://img.shields.io/github/forks/cobidev/gatsby-simplefolio)
+# Gatsby Simplefolio with TS & Emotion ⚡️ [![GitHub](https://img.shields.io/github/license/antska/gatsby-simplefolio?color=blue)](https://github.com/antska/gatsby-simplefolio/blob/master/LICENSE.md) ![GitHub stars](https://img.shields.io/github/stars/antska/gatsby-simplefolio) ![GitHub forks](https://img.shields.io/github/forks/antska/gatsby-simplefolio)
 
-## A clean, beautiful and responsive portfolio template for Developers
+## A clean, beautiful and responsive portfolio template for Developers built with Typescript & Emotion
 
 <h2 align="center">
   <img src="https://github.com/cobidev/gatsby-simplefolio/blob/master/examples/example.gif" alt="Gatsby Simplefolio" width="600px" />
@@ -11,14 +11,15 @@
 
 ⚡️ Modern UI Design + Reveal Animations\
 ⚡️ One Page Layout built with React\
-⚡️ Styled with Bootstrap v4.3 + Custom SCSS\
+⚡️ Styled with Bootstrap v4.3 + Emotion\
+⚡️ Built with Typescript
 ⚡️ Fully Responsive\
 ⚡️ Configurable color scheme\
 ⚡️ Image optimization with Gatsby\
 ⚡️ Easy site customization\
 ⚡️ Well organized documentation
 
-To view a demo example, **[click here](https://gatsby-simplefolio.netlify.com/)**\
+To view a demo example, **[click here](https://gatsby-simplefolio-ts-emotion.netlify.com/)**\
 To view a live example, **[click here](https://cobidev.com/)**
 
 ---
@@ -53,10 +54,10 @@ From your command line, first clone Simplefolio:
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/cobidev/gatsby-simplefolio
+$ git clone https://github.com/antska/gatsby-simplefolio-ts-emotion
 
 # Go into the repository
-$ cd gatsby-simplefolio
+$ cd gatsby-simplefolio-ts-emotion
 
 # Remove current origin repository
 $ git remote remove origin
@@ -104,7 +105,7 @@ Once your server has started, go to this url `http://localhost:8000/` and you wi
 
 ### Step 1 - STRUCTURE
 
-Go to `/src/mock/data.js` and fill your information, they are 5 objects:
+Go to `/src/mock/data.tsx` and fill your information, they are 5 objects:
 
 ### Hero Section
 
@@ -157,7 +158,6 @@ export const projectsData = [
     url: '',
     repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
   },
-  ...
 ];
 ```
 
@@ -176,28 +176,32 @@ export const contactData = {
 You can remove or add as many you social-media icons you want.\
 Just put an object with the corresponding values inside the networks `array` or remove it from there.
 
-```javascript
+```typescript jsx
 export const footerData = {
   networks: [
     {
       id: nanoid(),
       name: 'twitter',
       url: '', // your twitter url
+      Icon: <Twitter />, // imported from '@emotion-icons/fa-brands'
     },
     {
       id: nanoid(),
       name: 'codepen',
       url: '', // your codepen url
+      Icon: <Codepen />, // imported from '@emotion-icons/fa-brands'
     },
     {
       id: nanoid(),
       name: 'linkedin',
       url: '', // your linkedin url
+      Icon: <LinkedIn />, // imported from '@emotion-icons/fa-brands'
     },
     {
       id: nanoid(),
       name: 'github',
       url: '', // your github url
+      Icon: <Github />, // imported from '@emotion-icons/fa-brands'
     },
   ],
 };
@@ -218,12 +222,17 @@ export const githubButtons = {
 
 Change the color theme of the website ( choose 2 colors to create a gradient ):
 
-Go to `src/styles/abstracts/_variables.scss` and only change the values on this classes `$main-color` and `$secondary-color` to your prefered HEX color
+Go to `src/styles/theme.ts` and only change the values of the `primary` and `secondary` colors to your preferred HEX color
 
-```scss
+```typescript
 // Default values
-$main-color: #02aab0;
-$secondary-color: #00cdac;
+const theme = {
+  colors: {
+    primary: '#02aab0',
+    secondary: '#00cdac',
+    ...
+  },
+}
 ```
 
 **_Note_**: I highly recommend to checkout gradients variations on [UI Gradient](https://uigradients.com/#BrightVault)
@@ -238,7 +247,8 @@ I highly recommend to use [Netlify](https://netlify.com) to achieve this on the 
 
 ## Others versions 👥
 
-[Simplefolio](https://github.com/cobidev/simplefolio) by [Jacobo Martinez](https://github.com/cobidev)\
+[Gatsby Simplefolio](https://github.com/cobidev/gatsby-simplefolio) by [Jacobo Martinez](https://github.com/cobidev) \
+[Simplefolio](https://github.com/cobidev/simplefolio) by [Jacobo Martinez](https://github.com/cobidev) \
 [Ember.js Simplefolio](https://github.com/sernadesigns/simplefolio-ember) by [Michael Serna](https://github.com/sernadesigns)
 
 ## Technologies used 🛠️
@@ -246,11 +256,14 @@ I highly recommend to use [Netlify](https://netlify.com) to achieve this on the 
 - [Gatsby](https://www.gatsbyjs.org/) - Static Site Generator
 - [GraphQL](https://graphql.org/) - Query language for APIs
 - [React](https://es.reactjs.org/) - Front-End JavaScript library
+- [Typescript](https://www.typescriptlang.org/) - Javascript with Types
 - [Bootstrap 4](https://getbootstrap.com/docs/4.3/getting-started/introduction/) - Front-End UI library
-- [Sass](https://sass-lang.com/documentation) - CSS extension language
+- [Emotion](https://emotion.sh) - CSS in JS library
+- [Emotion icons](https://emotion-icons.dev/) - Import icons like React components
 
 ## Authors
 
+- **Antonis Skandalis** - [https://antska.github.io](https://antska.github.io)
 - **Jacobo Martinez** - [https://github.com/cobidev](https://github.com/cobidev)
 
 ## Status
