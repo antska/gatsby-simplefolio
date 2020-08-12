@@ -40,9 +40,9 @@ export const projectsData = [
     info:
       'Data analysis on relationships between pharmacologic substances or targets & disease. ' +
       'Among others, drug identification, finding the top 10 key opinion leaders per drug and ' +
-      'clustering based on protein target have been achieved',
+      'clustering based on protein target have been achieved.',
     info2: '',
-    url: '/static/e92e987b731bb48e378c17ff4a828bee/pharmacologic_substances_coronavirus.pdf',
+    url: '/files/pharmacologic_substances_coronavirus.pdf',
   },
   {
     id: nanoid(),
@@ -54,7 +54,7 @@ export const projectsData = [
       'and prospectively identify a target subpopulation ' +
       'when having time-to-event endpoints as a primary outcome.',
     info2: '',
-    url: '/static/50fdc66cdf3bab1603b91ec9e4068101/clinical_trials_angeliki_skandali.pdf',
+    url: '/files/clinical_trials_angeliki_skandali.pdf',
   },
   {
     id: nanoid(),
@@ -82,12 +82,6 @@ export const footerData = {
   networks: [
     {
       id: nanoid(),
-      name: 'twitter',
-      url: 'https://twitter.com/AngelikiSkanda1',
-      Icon: <Twitter size={28} />,
-    },
-    {
-      id: nanoid(),
       name: 'linkedin',
       url: 'https://www.linkedin.com/in/angeliki-skandali',
       Icon: <LinkedinIn size={28} />,
@@ -97,6 +91,12 @@ export const footerData = {
       name: 'github',
       url: 'https://github.com/askandali',
       Icon: <Github size={28} />,
+    },
+    {
+      id: nanoid(),
+      name: 'twitter',
+      url: 'https://twitter.com/AngelikiSkanda1',
+      Icon: <Twitter size={28} />,
     },
   ],
 };
