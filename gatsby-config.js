@@ -62,8 +62,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Simplefolio`,
-        short_name: `Simplefolio`,
+        name: `Angeliki Skandali`,
+        short_name: `angelikiskandali`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#02aab0`,
