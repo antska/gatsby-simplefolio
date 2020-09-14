@@ -1,8 +1,8 @@
 const config = {
   defaultTitle: 'Angeliki Skandali',
-  logo: 'https://skange.netlify.app/favicon-32x32.png',
+  logo: 'https://skange.com/favicon-32x32.png',
   author: 'Angeliki Skandali',
-  url: 'https://skange.netlify.app',
+  url: 'https://skange.com',
   legalName: 'Angeliki Skandali',
   defaultDescription:
     "I'm Angeliki Skandali, a Data Analyst - Scientist with in depth knowledge of statistical modeling, data analysis and statistical learning.",

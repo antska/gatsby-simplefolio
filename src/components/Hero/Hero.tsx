@@ -36,7 +36,7 @@ const Hero = () => {
       <Container>
         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={500} distance="30px">
           <h1 css={heroTitleStyle}>
-            {title || 'Hi, my name is'} <span css={textColorMain}>{name || 'Your Name'}</span>
+            {title || 'Hi, my name is'} <span css={textColorMain}>{name}</span>
             <br />
             {subtitle || "I'm the Unknown Developer."}
           </h1>

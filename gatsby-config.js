@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://skange.netlify.app`,
+    siteUrl: `https://skange.com`,
   },
   plugins: [
     `gatsby-plugin-emotion`,
@@ -54,8 +54,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: 'https://skange.netlify.app',
-        sitemap: 'https://skange.netlify.app/sitemap.xml',
+        host: 'https://skange.com',
+        sitemap: 'https://skange.com/sitemap.xml',
         policy: [{ userAgent: '*', allow: '/' }],
       },
     },

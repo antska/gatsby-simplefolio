@@ -39,9 +39,7 @@ const SEO = ({
 			"@id": "https://google.com/article"
 		},
 		"headline": "${description}",
-		"image": "${
-      cover ? `https://skange.netlify.app${cover}` : `https://skange.netlify.app${Thumbnail}`
-    }",
+		"image": "${cover ? `https://skange.com${cover}` : `https://skange.com${Thumbnail}`}",
 		"datePublished": "${datePublished}",
 		"dateModified": "${dateModified}",
 		"author": {

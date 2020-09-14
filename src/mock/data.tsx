@@ -28,7 +28,8 @@ export const aboutData = {
     'Conducted data analysis in a big variety of projects that included prediction, modeling different kind of data, machine learning techniques, visualization of results etc.',
   paragraphThree:
     'Successfully developed and implemented clinical trial design that detects gene signatures, classifies sensitive patients and tests treatment efficacy.',
-  resume: 'https://www.resumemaker.online/es.php', // if no resume, the button will not show up
+  skills: 'Skills: R, Python, SPSS, Tableau, SQL, MS Office',
+  resume: 'https://www.resumemaker.online/es.php',
 };
 
 // PROJECTS DATA
