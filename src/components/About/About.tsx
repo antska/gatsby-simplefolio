@@ -119,18 +119,40 @@ const About = () => {
                 <AboutWrapperInfoText>{paragraphTwo}</AboutWrapperInfoText>
                 <AboutWrapperInfoText>{paragraphThree}</AboutWrapperInfoText>
                 <AboutWrapperInfoText>{skills}</AboutWrapperInfoText>
-                {resume && (
+                <div className="flex flex-row">
+                  {resume && (
+                    <span className="d-flex mt-3 mr-3">
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        css={[buttonStyle, resumeButtonStyle]}
+                        href={data.file.publicURL}
+                      >
+                        CV
+                      </a>
+                    </span>
+                  )}
+                  <span className="d-flex mt-3 mr-3">
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      css={[buttonStyle, resumeButtonStyle]}
+                      href="https://github.com/askandali"
+                    >
+                      Github
+                    </a>
+                  </span>
                   <span className="d-flex mt-3">
                     <a
                       target="_blank"
                       rel="noopener noreferrer"
                       css={[buttonStyle, resumeButtonStyle]}
-                      href={data.file.publicURL}
+                      href="https://public.tableau.com/profile/angeliki.skandali"
                     >
-                      CV
+                      Tableau
                     </a>
                   </span>
-                )}
+                </div>
               </AboutWrapperInfo>
             </Fade>
           </Col>

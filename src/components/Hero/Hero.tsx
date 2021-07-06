@@ -36,16 +36,16 @@ const Hero = () => {
       <Container>
         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={500} distance="30px">
           <h1 css={heroTitleStyle}>
-            {title || 'Hi, my name is'} <span css={textColorMain}>{name}</span>
+            {title} <span css={textColorMain}>{name}</span>
             <br />
-            {subtitle || "I'm the Unknown Developer."}
+            {subtitle}
           </h1>
         </Fade>
         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
           <p css={heroCtaStyle}>
             <span css={[buttonStyle, heroButtonStyle]}>
               <Link to="about" smooth duration={1000}>
-                {cta || 'Know more'}
+                {cta}
               </Link>
             </span>
           </p>

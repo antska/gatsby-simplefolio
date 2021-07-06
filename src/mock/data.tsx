@@ -4,7 +4,7 @@ import { Twitter, LinkedinIn, Github } from '@emotion-icons/fa-brands';
 
 // HEAD DATA
 export const headData = {
-  title: 'Angeliki Skandali', // e.g: 'Name | Developer'
+  title: 'Hi, my name is Angeliki Skandali', // e.g: 'Name | Developer'
   extraTitle: 'Data Analyst - Scientist',
   lang: 'en',
   description:
@@ -13,10 +13,10 @@ export const headData = {
 
 // HERO DATA
 export const heroData = {
-  title: '',
+  title: 'Hi, my name is',
   name: 'Angeliki Skandali',
   subtitle: 'I am a curious Data Analyst',
-  cta: '',
+  cta: 'Learn more',
 };
 
 // ABOUT DATA
